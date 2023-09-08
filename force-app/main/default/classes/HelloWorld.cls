@@ -1,5 +1,5 @@
 global without sharing class HelloWorld {
     public static void TestDebugLog(){
-        System.Debug('HelloWorld yyyy');
+        System.Debug('HelloWorld - YML - 01');
     }
 }
