@@ -1,6 +1,9 @@
 # Unique name for this workflow
 name: Validate PR on development branch
 
+env:
+  APEX_TESTS: all
+
 # Definition when the workflow should run
 on:
     # The workflow will run whenever an event happens on a pull request
