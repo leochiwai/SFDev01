@@ -179,5 +179,8 @@ jobs:
               run: |
                   - sf project deploy validate -x manifest/package.xml --target-org integration --wait 60
 
+            - name: 'Run all tests 2'
+              run: sf project deploy validate -x manifest/package.xml --target-org integration --wait 60
+
             - name: 'Deploy destructive changes (if any)'
               run: sf project deploy start -x manifest/package.xml --target-org integration --wait 60
