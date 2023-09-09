@@ -46,5 +46,8 @@ jobs:
             - name: 'Authenticate to Integration Org'
               run: sfdx auth:sfdxurl:store -f ./SFDX_INTEGRATION_URL.txt -s -a integration
 
+            - name: 'Run all tests'
+              run: sf project deploy validate -x manifest/package.xml --target-org integration --wait 60
+
             - name: 'Deploy destructive changes (if any)'
               run: sf project deploy start -x manifest/package.xml --target-org integration --test-level RunLocalTests --wait 60
